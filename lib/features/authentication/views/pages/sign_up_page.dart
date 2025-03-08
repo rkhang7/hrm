@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:hrm/commom/pages/base_page.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
@@ -45,7 +46,7 @@ class SignUpPage extends GetView<SignUpController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         BaseText(
-                          text: "Today Task",
+                          text: "today_task".tr,
                           fontWeight: FontWeight.w600,
                           color: Pallete.primaryTextColor,
                           fontSize: 11.sp,
