@@ -24,28 +24,26 @@ class BasePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: PopScope(
-        onPopInvokedWithResult: (didPop, result) {},
-        child: Scaffold(
-          resizeToAvoidBottomInset: resizeToAvoidBottomInse,
-          key: key,
-          drawer: drawer,
-          backgroundColor: backgroundColor,
-          appBar: appBar,
-          body: RefreshIndicator(
-            onRefresh: onRefresh,
-            triggerMode: RefreshIndicatorTriggerMode.anywhere,
-            child: Padding(
-              padding: padding ??
-                  EdgeInsets.all(
-                    SpacingConstants.defaultPaddingPage,
-                  ),
-              child: body,
-            ),
+    return PopScope(
+      onPopInvokedWithResult: (didPop, result) {},
+      child: Scaffold(
+        resizeToAvoidBottomInset: resizeToAvoidBottomInse,
+        key: key,
+        drawer: drawer,
+        backgroundColor: backgroundColor,
+        appBar: appBar,
+        body: RefreshIndicator(
+          onRefresh: onRefresh,
+          triggerMode: RefreshIndicatorTriggerMode.anywhere,
+          child: Padding(
+            padding: padding ??
+                EdgeInsets.all(
+                  SpacingConstants.defaultPaddingPage,
+                ),
+            child: body,
           ),
-          bottomNavigationBar: bottomNavigationBar,
         ),
+        bottomNavigationBar: bottomNavigationBar,
       ),
     );
   }

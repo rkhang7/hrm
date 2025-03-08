@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hrm/routes/app_pages.dart';
 import 'package:hrm/routes/app_routes.dart';
 
@@ -16,6 +17,11 @@ class App extends StatelessWidget {
       child: GetMaterialApp(
         getPages: AppPages.getPages,
         initialRoute: AppRoutes.signUp,
+        theme: ThemeData(
+          textTheme: GoogleFonts.inderTextTheme(
+            Theme.of(context).textTheme,
+          ),
+        ),
       ),
     );
   }
