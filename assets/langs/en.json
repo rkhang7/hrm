@@ -1,5 +1,7 @@
 {
     "title": "Hello, World!",
     "message": "Welcome to our Flutter app.",
-    "today_task": "Today task"
+    "today_task": "Today task",
+    "the_tasks_assigned_to_you_for_today": "The tasks assigned to you for today",
+    "wiring_dashboard_analytics": "Wiring Dashboard Analytics"
 }
