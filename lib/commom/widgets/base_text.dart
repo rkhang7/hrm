@@ -19,6 +19,7 @@ class BaseText extends StatelessWidget {
   final Color? decorationColor;
   final double? decorationThickness;
   final FontStyle? fontStyle;
+  final double? letterSpacing;
   const BaseText({
     super.key,
     required this.text,
@@ -37,6 +38,7 @@ class BaseText extends StatelessWidget {
     this.decorationColor,
     this.decorationThickness,
     this.fontStyle,
+    this.letterSpacing,
   });
 
   @override
@@ -60,6 +62,7 @@ class BaseText extends StatelessWidget {
           decorationStyle: decorationStyle,
           decorationColor: decorationColor,
           fontStyle: fontStyle,
+          letterSpacing: letterSpacing,
         ),
         textAlign: textAlign,
         overflow: textOverflow,

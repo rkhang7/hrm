@@ -3,16 +3,14 @@ class AssetsConstants {
 
   static const String _iconsPath = 'assets/icons';
   static const String activityIcon = '$_iconsPath/activity.svg';
+  static const String timeIcon = '$_iconsPath/time.svg';
+  static const String flagIcon = '$_iconsPath/flag.svg';
 
   ///
 
   static const String _imagesPath = 'assets/images';
-  static const String skinTypeSelfDiagnosisBannerImage =
-      '$_imagesPath/skin_type_self_diagnosis_banner.png';
-  static const String pharmestheticGoldImage =
-      '$_imagesPath/pharmesthetic_gold.svg';
-  static const String pharmestheticSplashImage =
-      '$_imagesPath/pharmesthetic_splash.png';
+  static const String avt01 = '$_imagesPath/avt01.png';
+  static const String avt02 = '$_imagesPath/avt02.png';
 
   static const String _introPath = 'assets/images/intro';
   static const String intro01 = '$_introPath/intro01.png';
