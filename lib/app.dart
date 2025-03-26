@@ -20,7 +20,7 @@ class App extends StatelessWidget {
         locale: TranslationService.locale,
         fallbackLocale: TranslationService.fallbackLocale,
         getPages: AppPages.getPages,
-        initialRoute: AppRoutes.signUp,
+        initialRoute: AppRoutes.onBoard,
         theme: ThemeData(
           textTheme: GoogleFonts.inderTextTheme(
             Theme.of(context).textTheme,

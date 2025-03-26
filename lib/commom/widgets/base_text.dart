@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hrm/core/theme/pallete.dart';
 
 class BaseText extends StatelessWidget {
@@ -20,10 +21,11 @@ class BaseText extends StatelessWidget {
   final double? decorationThickness;
   final FontStyle? fontStyle;
   final double? letterSpacing;
+
   const BaseText({
     super.key,
     required this.text,
-    this.font = AppFont.noto,
+    this.font = AppFont.roboto,
     this.fontSize,
     this.fontWeight = FontWeight.w400,
     this.color,
@@ -47,12 +49,7 @@ class BaseText extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: TextStyle(
-          fontFamily: font == AppFont.pretendard
-              ? 'Pretendard'
-              : font == AppFont.milion
-                  ? 'Minion'
-                  : 'NotoSerifKR',
+        style: _getFontStyle().copyWith(
           fontSize: fontSize ?? 14.sp,
           fontWeight: fontWeight,
           color: color ?? Pallete.blackColor,
@@ -71,6 +68,17 @@ class BaseText extends StatelessWidget {
       ),
     );
   }
+
+  TextStyle _getFontStyle() {
+    switch (font) {
+      case AppFont.roboto:
+        return GoogleFonts.roboto();
+      case AppFont.inter:
+        return GoogleFonts.inter();
+      default:
+        return GoogleFonts.roboto();
+    }
+  }
 }
 
-enum AppFont { noto, pretendard, milion }
+enum AppFont { inter, roboto }

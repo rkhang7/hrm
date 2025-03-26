@@ -7,12 +7,12 @@ import 'package:hrm/commom/pages/base_page.dart';
 import 'package:hrm/commom/widgets/base_svg_icon.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
 import 'package:hrm/core/theme/pallete.dart';
-import 'package:hrm/features/authentication/controllers/sign_up_controller.dart';
+import 'package:hrm/features/authentication/controllers/onboard_controller.dart';
 import 'package:hrm/utils/constants/assets_constants.dart';
 import 'package:hrm/utils/constants/spacing_constants.dart';
 
-class SignUpPage extends GetView<SignUpController> {
-  const SignUpPage({super.key});
+class OnboardPage extends GetView<OnboardController> {
+  const OnboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,18 @@ class SignUpPage extends GetView<SignUpController> {
           ),
           Expanded(
             flex: 3,
-            child: Container(color: Pallete.whiteColor),
+            child: Container(
+              color: Pallete.whiteColor,
+              child: Column(
+                children: [
+                  BaseText(
+                    text: 'navigate_your_work'.tr,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w600,
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),
@@ -70,6 +81,7 @@ class SignUpPage extends GetView<SignUpController> {
             text: 'the_tasks_assigned_to_you_for_today'.tr,
             fontSize: 9.44.sp,
             color: Pallete.secondTextColor,
+            font: AppFont.inter,
           ),
           _buildTaskDetails(),
         ],
@@ -85,6 +97,7 @@ class SignUpPage extends GetView<SignUpController> {
           fontWeight: FontWeight.w600,
           color: Pallete.primaryTextColor,
           fontSize: 11.sp,
+          font: AppFont.inter,
         ),
         Gap(8.w),
         Container(
@@ -142,6 +155,7 @@ class SignUpPage extends GetView<SignUpController> {
           color: HexColor("#2B2B2B"),
           fontWeight: FontWeight.w500,
           fontSize: 11.sp,
+          font: AppFont.inter,
         ),
       ],
     );
@@ -193,6 +207,7 @@ class SignUpPage extends GetView<SignUpController> {
             fontWeight: FontWeight.w500,
             color: textColor,
             letterSpacing: -0.39.sp,
+            font: AppFont.inter,
           ),
         ],
       ),
