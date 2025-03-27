@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:hrm/commom/pages/base_page.dart';
+import 'package:hrm/commom/widgets/base_filled_button.dart';
 import 'package:hrm/commom/widgets/base_svg_icon.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
 import 'package:hrm/core/theme/pallete.dart';
@@ -28,6 +29,7 @@ class OnboardPage extends GetView<OnboardController> {
           Expanded(
             flex: 3,
             child: Container(
+              padding: EdgeInsets.all(SpacingConstants.defaultSize),
               color: Pallete.whiteColor,
               child: Column(
                 children: [
@@ -35,7 +37,27 @@ class OnboardPage extends GetView<OnboardController> {
                     text: 'navigate_your_work'.tr,
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w600,
-                  )
+                  ),
+                  BaseText(
+                    text: 'efficient_easy'.tr,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  Gap(10.h),
+                  BaseText(
+                    text:
+                        'increase_your_work_management_career_development_radically'
+                            .tr,
+                    font: AppFont.inter,
+                    fontSize: 13.sp,
+                    color: Pallete.secondTextColor,
+                    textAlign: TextAlign.center,
+                  ),
+                  Gap(20.h),
+                  BaseFilledButton(
+                    text: 'sign_up'.tr,
+                  ),
+                  Gap(10.h),
                 ],
               ),
             ),
