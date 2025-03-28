@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
 import 'package:hrm/core/theme/pallete.dart';
 
-class BaseFilledButton extends StatelessWidget {
+class BaseOutlineButton extends StatelessWidget {
   final Function()? onPressed;
   final String text;
-
-  const BaseFilledButton({
+  const BaseOutlineButton({
     super.key,
     this.onPressed,
     required this.text,
@@ -20,18 +18,10 @@ class BaseFilledButton extends StatelessWidget {
       color: Colors.transparent, // Đảm bảo nền trong suốt
       child: Ink(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              HexColor("#8862F2"),
-              HexColor("#7544FC"),
-              HexColor("#5B2ED4"),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            stops: const [0.0, 0.5, 1.0],
-          ),
-          borderRadius: BorderRadius.circular(100.sp),
-        ),
+            borderRadius: BorderRadius.circular(100.sp),
+            border: Border.all(
+              color: Pallete.purple500Color,
+            )),
         child: InkWell(
           onTap: onPressed,
           borderRadius: BorderRadius.circular(100.sp),
@@ -43,7 +33,7 @@ class BaseFilledButton extends StatelessWidget {
             child: BaseText(
               text: text,
               fontWeight: FontWeight.w500,
-              color: Pallete.whiteColor,
+              color: Pallete.purple500Color,
               fontSize: 14.sp,
             ),
           ),
