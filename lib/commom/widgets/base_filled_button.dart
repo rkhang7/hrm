@@ -7,6 +7,7 @@ import 'package:hrm/core/theme/pallete.dart';
 class BaseFilledButton extends StatelessWidget {
   final Function()? onPressed;
   final String text;
+
   const BaseFilledButton({
     super.key,
     this.onPressed,
@@ -15,15 +16,19 @@ class BaseFilledButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent, // Để gradient hiển thị đúng
-
-      child: InkWell(
-        onTap: onPressed,
-        borderRadius: BorderRadius.circular(12.sp), // Bo góc ripple effect
+    return SizedBox(
+      height: 48.sp,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.zero, // Loại bỏ padding mặc định
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(100.sp),
+          ),
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+        ),
         child: Ink(
-          height: 48.sp, // Điều chỉnh chiều cao
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -33,16 +38,23 @@ class BaseFilledButton extends StatelessWidget {
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
+              stops: const [0.0, 0.5, 1.0], // Điều chỉnh phân bố màu
             ),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(100.sp),
           ),
-          child: Center(
-              child: BaseText(
-            text: text,
-            fontWeight: FontWeight.w500,
-            fontSize: 14.sp,
-            color: Pallete.whiteColor,
-          )),
+          child: InkWell(
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.sp),
+                child: BaseText(
+                  text: text,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp,
+                  color: Pallete.whiteColor,
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
