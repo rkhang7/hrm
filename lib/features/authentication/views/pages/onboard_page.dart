@@ -10,6 +10,7 @@ import 'package:hrm/commom/widgets/base_svg_icon.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
 import 'package:hrm/core/theme/pallete.dart';
 import 'package:hrm/features/authentication/controllers/onboard_controller.dart';
+import 'package:hrm/routes/app_routes.dart';
 import 'package:hrm/utils/constants/assets_constants.dart';
 import 'package:hrm/utils/constants/spacing_constants.dart';
 
@@ -19,16 +20,18 @@ class OnboardPage extends GetView<OnboardController> {
   @override
   Widget build(BuildContext context) {
     return BasePage(
+      statusBarColor: Pallete.purple500Color,
+      statusBarIconBrightness: Brightness.light,
       padding: EdgeInsets.zero,
       onRefresh: () async {},
       body: Column(
         children: [
           Expanded(
-            flex: 5,
+            flex: 6,
             child: _buildGradientContainer(),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Container(
               padding: EdgeInsets.all(SpacingConstants.defaultSize * 1.5),
               color: Pallete.whiteColor,
@@ -62,7 +65,9 @@ class OnboardPage extends GetView<OnboardController> {
                   Gap(15.h),
                   BaseOutlineButton(
                     text: 'sign_up'.tr,
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.signUp);
+                    },
                   ),
                 ],
               ),

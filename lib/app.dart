@@ -18,6 +18,7 @@ class App extends StatelessWidget {
       child: GetMaterialApp(
         translations: TranslationService(),
         locale: TranslationService.locale,
+        debugShowCheckedModeBanner: false,
         fallbackLocale: TranslationService.fallbackLocale,
         getPages: AppPages.getPages,
         initialRoute: AppRoutes.onBoard,

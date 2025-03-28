@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hrm/utils/constants/spacing_constants.dart';
 
 class BasePage extends StatelessWidget {
@@ -10,6 +11,8 @@ class BasePage extends StatelessWidget {
   final Widget? bottomNavigationBar;
   final Future<void> Function() onRefresh;
   final bool? resizeToAvoidBottomInse;
+  final Color? statusBarColor;
+  final Brightness? statusBarIconBrightness;
   const BasePage({
     super.key,
     this.appBar,
@@ -19,31 +22,35 @@ class BasePage extends StatelessWidget {
     this.drawer,
     this.bottomNavigationBar,
     required this.onRefresh,
+    this.statusBarColor,
     this.resizeToAvoidBottomInse,
+    this.statusBarIconBrightness,
   });
 
   @override
   Widget build(BuildContext context) {
     return PopScope(
       onPopInvokedWithResult: (didPop, result) {},
-      child: Scaffold(
-        resizeToAvoidBottomInset: resizeToAvoidBottomInse,
-        key: key,
-        drawer: drawer,
-        backgroundColor: backgroundColor,
-        appBar: appBar,
-        body: RefreshIndicator(
-          onRefresh: onRefresh,
-          triggerMode: RefreshIndicatorTriggerMode.anywhere,
-          child: Padding(
-            padding: padding ??
-                EdgeInsets.all(
-                  SpacingConstants.defaultPaddingPage,
-                ),
-            child: body,
+      child: SafeArea(
+        child: Scaffold(
+          resizeToAvoidBottomInset: resizeToAvoidBottomInse,
+          key: key,
+          drawer: drawer,
+          backgroundColor: backgroundColor,
+          appBar: appBar,
+          body: RefreshIndicator(
+            onRefresh: onRefresh,
+            triggerMode: RefreshIndicatorTriggerMode.anywhere,
+            child: Padding(
+              padding: padding ??
+                  EdgeInsets.all(
+                    SpacingConstants.defaultPaddingPage,
+                  ),
+              child: body,
+            ),
           ),
+          bottomNavigationBar: bottomNavigationBar,
         ),
-        bottomNavigationBar: bottomNavigationBar,
       ),
     );
   }

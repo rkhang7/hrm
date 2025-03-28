@@ -5,6 +5,7 @@ class AssetsConstants {
   static const String activityIcon = '$_iconsPath/activity.svg';
   static const String timeIcon = '$_iconsPath/time.svg';
   static const String flagIcon = '$_iconsPath/flag.svg';
+  static const String appIcon = '$_iconsPath/app.svg';
 
   ///
 
