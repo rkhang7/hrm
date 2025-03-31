@@ -3,6 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 
 class Pallete {
   // purple
+  static Color purple25Color = HexColor("#FAFAFF");
   static Color purple100Color = HexColor("#EBE9FE");
   static Color purple500Color = HexColor("#7A5AF8");
 
@@ -20,5 +21,5 @@ class Pallete {
   static Color secondTextColor = HexColor("#475467");
 
   // button
-  static Color backgroundPrimaty = HexColor("#7A5AF8");
+  static Color backgroundPrimary = HexColor("#7A5AF8");
 }

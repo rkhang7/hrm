@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hrm/commom/base/base_controller.dart';
 
 class SignUpController extends BaseController {
@@ -8,4 +9,12 @@ class SignUpController extends BaseController {
   final lastNameController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
+
+  var aggreeTerm = false.obs;
+
+  final formKey = GlobalKey<FormState>();
+
+  void signUp() {
+    if (formKey.currentState!.validate()) {}
+  }
 }

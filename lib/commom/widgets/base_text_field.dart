@@ -118,7 +118,7 @@ class BaseTextField extends StatelessWidget {
                     )
                   : OutlineInputBorder(
                       borderSide: BorderSide(
-                          width: 1, color: Pallete.backgroundPrimaty),
+                          width: 1, color: Pallete.backgroundPrimary),
                     ),
               disabledBorder: noBorder
                   ? UnderlineInputBorder(
