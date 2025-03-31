@@ -9,6 +9,7 @@ class Pallete {
   // gray
   static Color gray100Color = HexColor("#F9FAFB");
   static Color gray200Color = HexColor("#EAECF0");
+  static Color gray400Color = HexColor("#98A2B3");
   static Color gray600Color = HexColor("#475467");
 
   // red
@@ -17,4 +18,7 @@ class Pallete {
   static Color blackColor = HexColor("#000000");
   static Color primaryTextColor = HexColor("#101828");
   static Color secondTextColor = HexColor("#475467");
+
+  // button
+  static Color backgroundPrimaty = HexColor("#7A5AF8");
 }

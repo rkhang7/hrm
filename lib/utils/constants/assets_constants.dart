@@ -6,6 +6,9 @@ class AssetsConstants {
   static const String timeIcon = '$_iconsPath/time.svg';
   static const String flagIcon = '$_iconsPath/flag.svg';
   static const String appIcon = '$_iconsPath/app.svg';
+  static const String emailIcon = '$_iconsPath/email.svg';
+  static const String userIcon = '$_iconsPath/user.svg';
+  static const String passwordIcon = '$_iconsPath/password.svg';
 
   ///
 

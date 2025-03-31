@@ -21,7 +21,7 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         fallbackLocale: TranslationService.fallbackLocale,
         getPages: AppPages.getPages,
-        initialRoute: AppRoutes.onBoard,
+        initialRoute: AppRoutes.signUp,
         theme: ThemeData(
           textTheme: GoogleFonts.inderTextTheme(
             Theme.of(context).textTheme,
