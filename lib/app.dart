@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hrm/main_binding.dart';
 import 'package:hrm/routes/app_pages.dart';
 import 'package:hrm/routes/app_routes.dart';
 import 'package:hrm/services/translation_service.dart';
@@ -21,7 +22,8 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         fallbackLocale: TranslationService.fallbackLocale,
         getPages: AppPages.getPages,
-        initialRoute: AppRoutes.signUp,
+        initialRoute: AppRoutes.onBoard,
+        initialBinding: MainBinding(),
         theme: ThemeData(
           textTheme: GoogleFonts.inderTextTheme(
             Theme.of(context).textTheme,
