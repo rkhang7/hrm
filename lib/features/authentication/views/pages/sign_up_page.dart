@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:hrm/commom/pages/base_page.dart';
 import 'package:hrm/commom/widgets/base_checkbox.dart';
+import 'package:hrm/commom/widgets/base_dropdown.dart';
 import 'package:hrm/commom/widgets/base_filled_button.dart';
 import 'package:hrm/commom/widgets/base_svg_icon.dart';
 import 'package:hrm/commom/widgets/base_text.dart';
@@ -153,6 +154,16 @@ class SignUpPage extends GetView<SignUpController> {
                   isRequireField: true,
                 ),
               ),
+            ],
+          ),
+          SpacingConstants.spaceBtwInputFields,
+          Row(
+            children: [
+              Expanded(
+                child: BaseDropdown(
+                  items: [],
+                ),
+              )
             ],
           ),
           SpacingConstants.spaceBtwInputFields,
